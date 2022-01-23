@@ -94,6 +94,7 @@ Qt::ItemFlags BattleMap::flags(const QModelIndex &index) const
         case BattleCell::CELL_TYPE::SHIP:
         return Qt::ItemIsEnabled;
     }
+    return QAbstractTableModel::flags(index);
 }
 
 void BattleMap::cellClicked(const QModelIndex &index)
