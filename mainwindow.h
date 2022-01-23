@@ -16,6 +16,7 @@ public:
     ~MainWindow();
 
 private:
+    void generateMap(const QString &map_name);
     Ui::MainWindow *ui;
     class BattleMap* map;
     class BattleMapView* map_view;

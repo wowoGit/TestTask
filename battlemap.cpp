@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QFile>
 
-BattleMap::BattleMap(QString filename, QObject *parent)
+BattleMap::BattleMap(const QString &filename, QObject *parent)
     :  QAbstractTableModel(parent)
 {
     QFile file(filename);

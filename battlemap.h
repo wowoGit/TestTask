@@ -11,7 +11,7 @@ class BattleMap : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit BattleMap(QString filename, QObject *parent = nullptr);
+    explicit BattleMap(const QString &filename, QObject *parent = nullptr);
     ~BattleMap();
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
