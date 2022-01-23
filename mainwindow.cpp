@@ -3,7 +3,6 @@
 
 
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include "highlightdelegate.h"
 #include "battlemap.h"
 #include "battlemapview.h"
