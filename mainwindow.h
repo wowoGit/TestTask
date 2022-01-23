@@ -3,10 +3,6 @@
 
 #include <QMainWindow>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -17,7 +13,6 @@ public:
 
 private:
     void generateMap(const QString &map_name);
-    Ui::MainWindow *ui;
     class BattleMap* map;
     class BattleMapView* map_view;
     class QHBoxLayout* layout;
