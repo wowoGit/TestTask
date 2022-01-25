@@ -7,24 +7,17 @@
 class BattleCell : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(bool isClickable READ isClickable CONSTANT)
+    Q_PROPERTY(bool isRevealed READ isRevealed WRITE setRevealed)
 public:
-    enum CELL_TYPE {SEA = 0, SHIP = 1};
-    BattleCell(QObject * parent = nullptr);
-    BattleCell(CELL_TYPE type);
-    CELL_TYPE getCellType() const;
+    BattleCell(bool isClickable = false, QObject * parent = nullptr);
     bool isRevealed() const;
-    void reveal();
-
-signals:
-    void stateChanged();
-
-private slots:
-    void onCellClick();
+    bool isClickable() const;
+    void setRevealed(const bool reveal);
 
 private:
-    CELL_TYPE m_type;
+    const bool m_isClickable;
     bool m_isRevealed;
 };
-Q_DECLARE_METATYPE(BattleCell)
 
 #endif // BATTLECELL_H
